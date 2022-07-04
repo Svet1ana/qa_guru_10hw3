@@ -20,8 +20,8 @@ public class SelenideTest {
     void selenideTest () {
         open("/selenide/selenide");
         $("#wiki-tab").click();
-//        element(byId("wiki-tab")).click();
-        $(".markdown-body").$(byText("Soft assertions")).shouldBe(visible).click();
+        $("#wiki-pages-filter").setValue("SoftAssertions");
+        $(byText("SoftAssertions")).shouldBe(visible).click();
         $("#user-content-3-using-junit5-extend-test-class").parent().shouldHave(text("Using JUnit5 extend test class"));
     }
 }
