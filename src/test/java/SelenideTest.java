@@ -21,7 +21,7 @@ public class SelenideTest {
         open("/selenide/selenide");
         $("#wiki-tab").click();
         $("#wiki-pages-filter").setValue("SoftAssertions");
-        $(byText("SoftAssertions")).shouldBe(visible).click();
+        $(byText("SoftAssertions")).click();
         $("#user-content-3-using-junit5-extend-test-class").parent().shouldHave(text("Using JUnit5 extend test class"));
     }
 }
